@@ -614,9 +614,9 @@ rhel8stig_maxlogins: 10
 rhel8stig_logon_banner: "{{ rhel8stig_workaround_for_disa_benchmark | ternary(
         rhel8stig_logon_banner_nice | regex_replace('(?s)(?<!\\n)\\n(?!(\n|$))', ' '),
         rhel8stig_logon_banner_nice) }}"
-rhel8stig_logon_banner_nice: |
+rhel8stig_logon_banner_nice: "
 'ECU’s Computing Facilities and Information Systems - Conditions of Use'
-'The ECU computer information systems network and equipment is provided for use by authorised personnel only., By continuing the logon process you acknowledge to have read, understood and agreed to abide by the ECU Acceptable Use of Information Systems Policy., Note: All access is logged and may be monitored.'
+'The ECU computer information systems network and equipment is provided for use by authorised personnel only., By continuing the logon process you acknowledge to have read, understood and agreed to abide by the ECU Acceptable Use of Information Systems Policy., Note: All access is logged and may be monitored.'"
     
 # Password complexity settings
 rhel8stig_password_complexity:
